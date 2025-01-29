@@ -12,11 +12,11 @@ Spark has two fundamentals data abstractions: RDD(a set of element of same type)
 
 Spark applications run as independent sets of processes on a cluster, coordinated by the SparkContext object in your main program (*driver program*).
 
-![SparkArchi.drawio.svg](Introduction%20to%20Apache%20Spark%20175d4718bce8800a96eef3c5faa6db49/SparkArchi.drawio.svg)
+![SparkArchi.drawio.svg](image/image1.svg)
 
 To run on a cluster, the SparkContext can connect to several types of cluster **managers (such as Spark’s own standalone cluster manager, Mesos and Kubernetes), which allocate resources across applications. Once connected, Spark acquires executors on nodes in the cluster, which are processes that run computations and store data for your application. Next, it sends your application code (Python files passed to SparkContext) to the executors. Finally, SparkContext sends tasks to the executors to run.
 
-![This figure helps us to understand how we can perform operations where the DataFrames are collected from sources and stored it into Cloud with the help of Programming Languages like Python, Java, Scala.](Introduction%20to%20Apache%20Spark%20175d4718bce8800a96eef3c5faa6db49/wholespark.drawio.svg)
+![This figure helps us to understand how we can perform operations where the DataFrames are collected from sources and stored it into Cloud with the help of Programming Languages like Python, Java, Scala.](image/image2.svg)
 
 This figure helps us to understand how we can perform operations where the DataFrames are collected from sources and stored it into Cloud with the help of Programming Languages like Python, Java, Scala.
 
@@ -30,13 +30,13 @@ Spark uses a **master/slave architecture** with one central coordinator, called 
 
 Spark has **built-in modules** for SQL, streaming, machine learning, and graph processing.
 
-![A pictorial idea of how the SparkContext takes input and converts it to new_rdd with transformations.](Introduction%20to%20Apache%20Spark%20175d4718bce8800a96eef3c5faa6db49/sparkcontext.drawio.svg)
+![A pictorial idea of how the SparkContext takes input and converts it to new_rdd with transformations.](image/image3.svg)
 
 A pictorial idea of how the SparkContext takes input and converts it to new_rdd with transformations.
 
 **Spark Context** is the entry point to any Spark functionality. It allows an user application to interact with the cluster and submit jobs by connecting to a cluster(Standalone, Kubernetes).
 
-![How transformations are done in SparkContext with some tasks to make the data more reliable.](Introduction%20to%20Apache%20Spark%20175d4718bce8800a96eef3c5faa6db49/spark_context.drawio.svg)
+![How transformations are done in SparkContext with some tasks to make the data more reliable.](image/image4.svg)
 
 How transformations are done in SparkContext with some tasks to make the data more reliable.
 
@@ -73,7 +73,7 @@ records=spark.sparkContext.textFile("sample.txt")
     ```
     
 
-![Screenshot 2025-01-07 at 22.11.33.png](Introduction%20to%20Apache%20Spark%20175d4718bce8800a96eef3c5faa6db49/Screenshot_2025-01-07_at_22.11.33.png)
+![Screenshot 2025-01-07 at 22.11.33.png](image/image5.png)
 
 - As everything installed, let’s try some basic code to see spark is working fine.
 
@@ -114,7 +114,7 @@ Lazy evaluation is a concept where the whole transformations and actions are des
 
 ### Narrow vs Wide Transformation
 
-![narrow.drawio.svg](Introduction%20to%20Apache%20Spark%20175d4718bce8800a96eef3c5faa6db49/narrow.drawio.svg)
+![narrow.drawio.svg](image/image6.svg)
 
 **Narrow transformations:** are process within a single partition.
 
@@ -205,7 +205,7 @@ output:
 +------+
 ```
 
-![functions to change the RDD to more useable for analysis with transformations and here count() is used as an action.](Introduction%20to%20Apache%20Spark%20175d4718bce8800a96eef3c5faa6db49/narrowtranscode.drawio.svg)
+![functions to change the RDD to more useable for analysis with transformations and here count() is used as an action.](image/image7.svg)
 
 functions to change the RDD to more useable for analysis with transformations and here count() is used as an action.
 
