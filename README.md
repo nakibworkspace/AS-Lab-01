@@ -12,7 +12,7 @@ Spark has two fundamentals data abstractions: RDD(a set of element of same type)
 
 Spark applications run as independent sets of processes on a cluster, coordinated by the SparkContext object in your main program (*driver program*).
 
-![SparkArchi.drawio.svg](image/image1.svg)
+![SparkArchi.drawio.svg](images/image1.svg)
 
 To run on a cluster, the SparkContext can connect to several types of cluster **managers (such as Spark’s own standalone cluster manager, Mesos and Kubernetes), which allocate resources across applications. Once connected, Spark acquires executors on nodes in the cluster, which are processes that run computations and store data for your application. Next, it sends your application code (Python files passed to SparkContext) to the executors. Finally, SparkContext sends tasks to the executors to run.
 
